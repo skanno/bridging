@@ -1,3 +1,4 @@
+import config from 'config';
 import express from 'express';
 import Url from 'url-parse';
 import wget from 'wget-improved';
@@ -42,4 +43,4 @@ app.get('/', (request, response) => {
   });
 });
 
-app.listen(PORT);
+app.listen(config.server_port);
