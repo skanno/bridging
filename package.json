@@ -1,0 +1,22 @@
+{
+  "name": "bridging",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skanno/bridging/issues"
+  },
+  "homepage": "https://github.com/skanno/bridging#readme",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "url-parse": "^1.5.10",
+    "wget-improved": "^3.3.1"
+  }
+}
