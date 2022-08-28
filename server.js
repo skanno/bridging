@@ -30,7 +30,9 @@ app.get('/', (request, response) => {
         content += chunk;
       });
       res.on('end', function() {
-        response.status(200).send(content);
+        response.contentType(res.headers['content-type'])
+          .status(200)
+          .send(content);
       });
     } else {
       response.status(500);
