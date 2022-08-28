@@ -4,6 +4,20 @@ import Url from 'url-parse';
 import wget from 'wget-improved';
 
 var app = express();
+const allowCrossDomain = function(request, response, next) {
+  response.header('Access-Control-Allow-Origin', '*');
+  response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  response.header(
+    'Access-Control-Allow-Headers',
+    'Content-Type, Authorization, access_token'
+  );
+  if ('OPTIONS' === request.method) {
+    response.send(200);
+  } else {
+    next();
+  }
+};
+app.use(allowCrossDomain);
 
 app.get('/', (request, response) => {
   if (request.query.url === undefined || request.query.url === '') {
