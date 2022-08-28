@@ -45,4 +45,6 @@ app.get('/', (request, response) => {
   });
 });
 
-app.listen(config.server_port);
+app.listen(config.server_port, function() {
+  console.log(`Bridging Server Listening. Port: ${config.server_port}`);
+});
