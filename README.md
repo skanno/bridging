@@ -16,7 +16,11 @@ sequenceDiagram
 - インストール方法
 ```bash
 npm install
-node server.js
+```
+
+- 起動方法
+```bash
+node server.js&
 ```
 
 - 使用方法
